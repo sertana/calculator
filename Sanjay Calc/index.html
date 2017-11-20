@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+</head>
+<body>
+
+    <form  name="Calc">
+        <table  border="30">
+            <tr>
+                <td>
+                    <input type="text" id="input" size="16">
+            </td>
+            </tr>        
+    <tr>
+        <td>
+            <input type="button" id="seven" value=" 7 " onclick="Calc.input.value += '7' ">
+            <input type="button" id="eight" value=" 8 " onclick="Calc.input.value += '8' ">
+            <input type="button" id="nine" value=" 9 " onclick="Calc.input.value += '9' ">
+            <input type="button" id="div" value = " / " onclick="Calc.input.value += '/' ">
+        </td> 
+    <tr>
+        <td>    
+            <input type="button" id="four" value=" 4 " onclick="Calc.input.value += '4' ">
+            <input type="button" id="five" value=" 5 " onclick="Calc.input.value += '5' ">
+            <input type="button" id="six" value=" 6 " onclick="Calc.input.value += '6' ">
+            <input type="button" id="multi" value = " * " onclick="Calc.input.value += '*' ">
+        </td>
+    <tr>    
+        <td>
+            <input type="button" id="one" value=" 1 " onclick="Calc.input.value += '1' ">
+            <input type="button" id="two" value=" 2 " onclick="Calc.input.value += '2' ">
+            <input type="button" id="three" value=" 3 " onclick="Calc.input.value += '3' ">
+            <input type="button" id="add" value = " + " onclick="Calc.input.value += '+' ">
+        </td>
+    <tr>
+        <td>
+            <input type="button" id="decimal" value=" . " onclick="Calc.input.value += '.' ">
+            <input type="button" id="zero" value=" 0 " onclick="Calc.input.value += '0' ">
+            <input type="button" id="avg" value = " AVG " onclick="average()">
+            <input type="button" id="sub" value = " - " onclick="Calc.input.value += '-' ">
+        </td>    
+    <tr>       
+        <td>    
+            <input type="button" id="srt" value = "SRT" onclick="sqrt()">
+            <input type="button" id="sq" value = " SQ " onclick="sqr() ">
+            <input type="button" id="clear" value = " AC " onclick="Calc.input.value = ' ' ">
+            <input type="button" id="equal" value = " = " onclick="Calc.input.value = eval(Calc.input.value)">
+        </td>
+    </tr>
+</table>
+</form>
+<script>
+    function average() {
+        Calc.input.value=eval(Calc.input.value)/Calc.input.value.split("+").length;
+    }
+    function sqrt(){
+        Calc.input.value=Math.sqrt(Calc.input.value);
+    }
+    function sqr(){
+        Calc.input.value=Math.pow(Calc.input.value,2);
+    }
+
+</script>
+</body>
+</html>
+
